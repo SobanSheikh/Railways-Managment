@@ -37,15 +37,17 @@ namespace Project
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,18 +129,55 @@ namespace Project
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(259, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1107, 743);
             this.panel2.TabIndex = 8;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(235, 314);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(557, 150);
+            this.tableLayoutPanel1.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Elephant", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(113, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(330, 75);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Don\'t let go to soon";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Elephant", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(52, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(453, 64);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "But don\'t hang on too long";
             // 
             // button9
             // 
@@ -158,7 +197,7 @@ namespace Project
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(481, 440);
+            this.label6.Location = new System.Drawing.Point(460, 544);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 30);
             this.label6.TabIndex = 6;
@@ -169,7 +208,7 @@ namespace Project
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(384, 376);
+            this.label5.Location = new System.Drawing.Point(362, 495);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(306, 38);
             this.label5.TabIndex = 5;
@@ -191,28 +230,6 @@ namespace Project
             this.label3.Size = new System.Drawing.Size(150, 100);
             this.label3.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Elephant", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(306, 303);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(453, 64);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "But don\'t hang on too long";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Elephant", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(361, 236);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(329, 54);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Don\'t let go to soon";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -225,6 +242,7 @@ namespace Project
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -246,6 +264,7 @@ namespace Project
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

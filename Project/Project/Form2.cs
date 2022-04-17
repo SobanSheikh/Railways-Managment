@@ -42,6 +42,8 @@ namespace Project
         private void button2_Click(object sender, EventArgs e)
         {
             change_form(new Form5());
+            Main m = new Main();
+            m.Visible = false;
         }
     }
 }

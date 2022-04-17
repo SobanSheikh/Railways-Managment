@@ -30,19 +30,21 @@ namespace Project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -53,7 +55,9 @@ namespace Project
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
@@ -63,6 +67,27 @@ namespace Project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1092, 731);
             this.panel1.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(784, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 28);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Search";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox5.Location = new System.Drawing.Point(862, 57);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(175, 31);
+            this.textBox5.TabIndex = 17;
             // 
             // tableLayoutPanel2
             // 
@@ -153,6 +178,28 @@ namespace Project
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1029, 106);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(518, 56);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "name";
+            this.textBox2.Size = new System.Drawing.Size(507, 45);
+            this.textBox2.TabIndex = 21;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(4, 56);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "id";
+            this.textBox1.Size = new System.Drawing.Size(507, 45);
+            this.textBox1.TabIndex = 20;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -184,7 +231,7 @@ namespace Project
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
@@ -200,7 +247,7 @@ namespace Project
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
@@ -213,8 +260,7 @@ namespace Project
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
@@ -229,7 +275,7 @@ namespace Project
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(44, 15);
@@ -238,28 +284,6 @@ namespace Project
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Trains";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(4, 56);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "id";
-            this.textBox1.Size = new System.Drawing.Size(507, 45);
-            this.textBox1.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(518, 56);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "name";
-            this.textBox2.Size = new System.Drawing.Size(507, 45);
-            this.textBox2.TabIndex = 21;
             // 
             // Form7
             // 
@@ -270,6 +294,7 @@ namespace Project
             this.Name = "Form7";
             this.Text = "Form7";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -297,5 +322,7 @@ namespace Project
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label9;
     }
 }
