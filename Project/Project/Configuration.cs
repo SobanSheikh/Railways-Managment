@@ -8,7 +8,7 @@ namespace Project
 {
     class Configuration
     {
-        String ConnectionStr = @"Data Source=DESKTOP-HBNR7VF;Initial Catalog=Db_MID;Integrated Security=True;MultipleActiveResultSets=True";
+        String ConnectionStr = @"Data Source=DESKTOP-FHJVRDL;Initial Catalog=FinalProject-GID41;Integrated Security=True";
         SqlConnection con;
         private static Configuration _instance;
         public static Configuration getInstance()
