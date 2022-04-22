@@ -97,11 +97,31 @@ namespace Project
             }
             rq.Close();
         }
-
+        private Form isactive;
+        private void change_form(Form form)
+        {
+            if (isactive != null)
+            {
+                isactive.Close();
+            }
+            isactive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
         private void Form7_Load(object sender, EventArgs e)
         {
             get_MaxTrainId();
             DataGridView_Fill();
+        }
+
+        private void btnCoach_Click(object sender, EventArgs e)
+        {
+            change_form(new Form11());
         }
     }
 }

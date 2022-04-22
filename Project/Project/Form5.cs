@@ -49,5 +49,10 @@ namespace Project
             MessageBox.Show("You have logged out...");
             change_form(new Form2());
         }
+
+        private void btnRoutes_Click(object sender, EventArgs e)
+        {
+            change_form(new Form10());
+        }
     }
 }

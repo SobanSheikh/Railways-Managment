@@ -41,6 +41,7 @@ namespace Project
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCoach = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -52,6 +53,7 @@ namespace Project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnCoach);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
@@ -239,6 +241,16 @@ namespace Project
             this.label1.Text = "Manage Trains";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnCoach
+            // 
+            this.btnCoach.Location = new System.Drawing.Point(594, 21);
+            this.btnCoach.Name = "btnCoach";
+            this.btnCoach.Size = new System.Drawing.Size(126, 31);
+            this.btnCoach.TabIndex = 15;
+            this.btnCoach.Text = "Manage Coach";
+            this.btnCoach.UseVisualStyleBackColor = true;
+            this.btnCoach.Click += new System.EventHandler(this.btnCoach_Click);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -275,5 +287,6 @@ namespace Project
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox tBoxName;
+        private System.Windows.Forms.Button btnCoach;
     }
 }
