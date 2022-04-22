@@ -30,41 +30,26 @@ namespace Project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tBoxPassword = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tBoxName = new System.Windows.Forms.TextBox();
+            this.tBoxEmail = new System.Windows.Forms.TextBox();
+            this.tBoxCNIC = new System.Windows.Forms.TextBox();
+            this.tBoxContact = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.btnRegister);
+            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -73,156 +58,110 @@ namespace Project
             this.panel1.Size = new System.Drawing.Size(722, 466);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // tableLayoutPanel1
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(398, 330);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 20);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.1711F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.8289F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
+            this.tableLayoutPanel1.Controls.Add(this.tBoxName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tBoxEmail, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tBoxPassword, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tBoxContact, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tBoxCNIC, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(123, 88);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 100);
+            this.tableLayoutPanel1.TabIndex = 16;
             // 
-            // button1
+            // tBoxPassword
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(258, 330);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 20);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.tBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tBoxPassword.Location = new System.Drawing.Point(265, 3);
+            this.tBoxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tBoxPassword.Name = "tBoxPassword";
+            this.tBoxPassword.PlaceholderText = "Password";
+            this.tBoxPassword.Size = new System.Drawing.Size(218, 23);
+            this.tBoxPassword.TabIndex = 7;
+            this.tBoxPassword.TextChanged += new System.EventHandler(this.tBoxPassword_TextChanged);
             // 
-            // textBox6
+            // dateTimePicker1
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(465, 285);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(143, 23);
-            this.textBox6.TabIndex = 12;
+            this.dateTimePicker1.Location = new System.Drawing.Point(266, 70);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(216, 23);
+            this.dateTimePicker1.TabIndex = 15;
             // 
-            // textBox5
+            // tBoxName
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(465, 224);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 23);
-            this.textBox5.TabIndex = 11;
+            this.tBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tBoxName.Location = new System.Drawing.Point(2, 3);
+            this.tBoxName.Margin = new System.Windows.Forms.Padding(2);
+            this.tBoxName.Name = "tBoxName";
+            this.tBoxName.PlaceholderText = "Name ";
+            this.tBoxName.Size = new System.Drawing.Size(220, 23);
+            this.tBoxName.TabIndex = 2;
             // 
-            // label7
+            // tBoxEmail
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(414, 260);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 15);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Date of Birth";
+            this.tBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tBoxEmail.Location = new System.Drawing.Point(2, 36);
+            this.tBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tBoxEmail.Name = "tBoxEmail";
+            this.tBoxEmail.PlaceholderText = "Email";
+            this.tBoxEmail.Size = new System.Drawing.Size(220, 23);
+            this.tBoxEmail.TabIndex = 8;
             // 
-            // label6
+            // tBoxCNIC
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(414, 197);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 15);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "CNIC";
+            this.tBoxCNIC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tBoxCNIC.Location = new System.Drawing.Point(2, 72);
+            this.tBoxCNIC.Margin = new System.Windows.Forms.Padding(2);
+            this.tBoxCNIC.Name = "tBoxCNIC";
+            this.tBoxCNIC.PlaceholderText = "CNIC";
+            this.tBoxCNIC.Size = new System.Drawing.Size(220, 23);
+            this.tBoxCNIC.TabIndex = 11;
             // 
-            // textBox4
+            // tBoxContact
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(188, 224);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(143, 23);
-            this.textBox4.TabIndex = 8;
+            this.tBoxContact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tBoxContact.Location = new System.Drawing.Point(265, 36);
+            this.tBoxContact.Margin = new System.Windows.Forms.Padding(2);
+            this.tBoxContact.Name = "tBoxContact";
+            this.tBoxContact.PlaceholderText = "Contact";
+            this.tBoxContact.Size = new System.Drawing.Size(218, 23);
+            this.tBoxContact.TabIndex = 6;
             // 
-            // textBox3
+            // btnRegister
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(188, 285);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 23);
-            this.textBox3.TabIndex = 7;
+            this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegister.Location = new System.Drawing.Point(366, 240);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(78, 29);
+            this.btnRegister.TabIndex = 14;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // textBox2
+            // btnClear
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(465, 161);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 23);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(141, 197);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 15);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Email";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(141, 260);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Password";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(414, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Contact";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(188, 161);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 23);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(141, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Full Name";
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.Location = new System.Drawing.Point(218, 240);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(78, 29);
+            this.btnClear.TabIndex = 13;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label1
             // 
@@ -244,9 +183,12 @@ namespace Project
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "User Registration";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,20 +196,15 @@ namespace Project
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox tBoxCNIC;
+        private System.Windows.Forms.TextBox tBoxEmail;
+        private System.Windows.Forms.TextBox tBoxPassword;
+        private System.Windows.Forms.TextBox tBoxContact;
+        private System.Windows.Forms.TextBox tBoxName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
