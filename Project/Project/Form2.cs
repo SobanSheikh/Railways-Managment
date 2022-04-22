@@ -45,5 +45,10 @@ namespace Project
             Main m = new Main();
             m.Visible = false;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Main());
+        }
     }
 }

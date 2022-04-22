@@ -106,3 +106,40 @@ C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\Project\Project\obj\Debug\netcor
 C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.dll
 C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.pdb
 C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.exe
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.deps.json
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.json
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.dev.json
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.pdb
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\itextsharp.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.AssemblyReference.cache
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Attendance.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form1.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form10.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form2.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form3.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form4.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form5.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form6.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form7.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form8.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form9.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Main.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Properties.Resources.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.GenerateResource.cache
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.GeneratedMSBuildEditorConfig.editorconfig
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.AssemblyInfoInputs.cache
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.AssemblyInfo.cs
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.CoreCompileInputs.cache
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.CopyComplete
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.dll
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.pdb
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache

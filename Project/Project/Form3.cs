@@ -48,5 +48,10 @@ namespace Project
         {
             change_form(new Form8());
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Main());
+        }
     }
 }

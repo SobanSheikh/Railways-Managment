@@ -43,5 +43,11 @@ namespace Project
         {
             change_form(new Form7());
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have logged out...");
+            change_form(new Form2());
+        }
     }
 }
