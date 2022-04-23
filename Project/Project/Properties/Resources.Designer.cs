@@ -103,6 +103,16 @@ namespace Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_evaluation_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-evaluation-64", resourceCulture);
@@ -113,9 +123,29 @@ namespace Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximize_window_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-maximize-window-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_railway_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-railway-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtract_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-subtract-48 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

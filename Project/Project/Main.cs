@@ -43,7 +43,34 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            change_form(new Form3());
+            Form3 form = new Form3();
+            change_form(form);
+            
+        }
+
+       
+           
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState== FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

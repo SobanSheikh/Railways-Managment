@@ -47,6 +47,21 @@ namespace Project
         {
             change_form(new Form8()); 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 2)
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("SELECT * From Booking", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        
     }
     }
 

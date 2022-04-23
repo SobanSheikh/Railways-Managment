@@ -30,6 +30,7 @@ namespace Project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCoach = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@ namespace Project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnCoach);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
@@ -62,6 +64,16 @@ namespace Project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(764, 439);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCoach
+            // 
+            this.btnCoach.Location = new System.Drawing.Point(594, 21);
+            this.btnCoach.Name = "btnCoach";
+            this.btnCoach.Size = new System.Drawing.Size(126, 31);
+            this.btnCoach.TabIndex = 15;
+            this.btnCoach.Text = "Manage Coach";
+            this.btnCoach.UseVisualStyleBackColor = true;
+            this.btnCoach.Click += new System.EventHandler(this.btnCoach_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -130,6 +142,7 @@ namespace Project
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -209,6 +222,7 @@ namespace Project
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(722, 204);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cell_Clicked);
             // 
             // tableLayoutPanel4
             // 
@@ -275,5 +289,6 @@ namespace Project
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox tBoxName;
+        private System.Windows.Forms.Button btnCoach;
     }
 }
