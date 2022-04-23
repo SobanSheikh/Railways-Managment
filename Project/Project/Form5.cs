@@ -54,5 +54,15 @@ namespace Project
         {
             change_form(new Form10());
         }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            change_form(new Form12());
+        }
     }
 }

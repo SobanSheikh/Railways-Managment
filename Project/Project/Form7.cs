@@ -11,7 +11,8 @@ namespace Project
 {
     public partial class Form7 : Form
     {
-        private int Max_TrainId;
+        private int Max_TrainId=0;
+        private int current_TrainID=-1;
         public Form7()
         {
             InitializeComponent();
@@ -81,7 +82,7 @@ namespace Project
         private void DataGridView_Fill()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select * from Train", con);
+            SqlCommand cmd = new SqlCommand("Select * from view_Train", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable(); da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -89,11 +90,14 @@ namespace Project
         private void get_MaxTrainId()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select MAX(Train.ID) FROM Train", con);
+            SqlCommand cmd = new SqlCommand("select Train.ID FROM Train where Train.[Name]='a' ", con);
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
-                Max_TrainId =int.Parse(rq[0].ToString());
+                if (rq[0].ToString() != "")
+                {
+                    current_TrainID = int.Parse(rq[0].ToString());
+                }
             }
             rq.Close();
         }
@@ -118,10 +122,46 @@ namespace Project
             get_MaxTrainId();
             DataGridView_Fill();
         }
-
         private void btnCoach_Click(object sender, EventArgs e)
         {
             change_form(new Form11());
+        }
+        private void Cell_Clicked(object sender, DataGridViewCellEventArgs e)
+        {
+             dataGridView1.CurrentRow.Selected = true;
+             tBoxName.Text = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+             get_CurrentTrainID(tBoxName.Text);     
+        }
+
+        private void get_CurrentTrainID(string name)
+        {
+           
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("select Train.ID FROM Train where Train.[Name]='"+name+"'", con);
+            SqlDataReader rq = cmd.ExecuteReader();
+            while (rq.Read())
+            {
+                if (rq[0].ToString() != "")
+                {
+                    current_TrainID = int.Parse(rq[0].ToString());
+                }
+            }
+            rq.Close();
+            
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+           
+            if (current_TrainID >= 0)
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("execute sp_UpdateTrain @Train_Name=@Name,@Train_Id=@Id", con);
+                cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
+                cmd.Parameters.AddWithValue("@Id", current_TrainID);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Train Has Been Updated Successfully");
+            }
+            Form7_Load(sender, e);
         }
     }
 }

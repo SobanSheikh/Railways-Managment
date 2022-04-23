@@ -181,3 +181,4 @@ C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\ob
 C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.pdb
 C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache
 C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form11.resources
+C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form12.resources
