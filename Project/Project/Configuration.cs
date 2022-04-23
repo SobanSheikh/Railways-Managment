@@ -9,7 +9,9 @@ namespace Project
     class Configuration
     {
 
+
         String ConnectionStr = @"Data Source=DESKTOP-FHJVRDL;Initial Catalog=FinalProject-GID41;Integrated Security=True";
+
 
         SqlConnection con;
         private static Configuration _instance;
