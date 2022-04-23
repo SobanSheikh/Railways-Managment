@@ -185,3 +185,43 @@ C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\ob
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form11.resources
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form12.resources
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Main_P.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.exe
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.deps.json
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.json
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.dev.json
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\Project.pdb
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\itextsharp.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.AssemblyReference.cache
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Attendance.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form1.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form10.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form11.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form12.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form2.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form3.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form4.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form5.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form6.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form7.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form8.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form9.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Main_P.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Main.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Properties.Resources.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.GenerateResource.cache
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.AssemblyInfoInputs.cache
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.AssemblyInfo.cs
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.CoreCompileInputs.cache
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.CopyComplete
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.dll
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.pdb
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache

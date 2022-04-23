@@ -48,7 +48,7 @@ namespace Project
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            change_form(new Main());
+            change_form(new Main_P());
         }
     }
 }

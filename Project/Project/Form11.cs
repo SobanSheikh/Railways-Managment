@@ -33,7 +33,7 @@ namespace Project
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
-                if (rq[0] != null)
+                if (rq[0].ToString() != "")
                 {
                     Max_CoachID = int.Parse(rq[0].ToString());
                 }
@@ -43,7 +43,7 @@ namespace Project
         private void DataGridView_Fill()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select * from Coach", con);
+            SqlCommand cmd = new SqlCommand("Select * from view_CoachDetails", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable(); da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -69,12 +69,11 @@ namespace Project
         {
             int class_ID = 0;
             var con = Configuration.getInstance().getConnection();
-
             SqlCommand cmd = new SqlCommand("select [LookUp].ID FROM [LookUp] where [LookUp].[Name]='" + cBoxClass.Text + "'", con);
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
-                if (rq[0] != null)
+                if (rq[0].ToString() != "")
                 {
                     class_ID = int.Parse(rq[0].ToString());
                 }
@@ -93,19 +92,48 @@ namespace Project
              cmd.ExecuteNonQuery();
              MessageBox.Show("AssessmentComponent Has Been Added Successfully");
          }*/
+        private void Add_Seats(int coach_ID,int number)
+        {
+            for(int i=0;i<number;i++)
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("Insert into Seat values (@ID,@Coach_ID,@Seat_No,@Status)", con);
+                cmd.Parameters.AddWithValue("@ID", get_SeatID() + 1);
+                cmd.Parameters.AddWithValue("@Coach_ID", coach_ID);
+                cmd.Parameters.AddWithValue("@Seat_No",i+1);
+                cmd.Parameters.AddWithValue("@Status",6);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        private int get_SeatID()
+        {
+            int s = 0;
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("select MAX(Seat.ID) FROM Seat", con);
+            SqlDataReader rq = cmd.ExecuteReader();
+            while (rq.Read())
+            {
+                if (rq[0].ToString() != "")
+                {
+                    s = int.Parse(rq[0].ToString());
+                }
+            }
+            rq.Close();
+            return s;
+        }
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("Insert into Coach values (@ID,@Train_ID,@Coach_No,@class)", con);
-            cmd.Parameters.AddWithValue("@ID", Max_CoachID + 1);
+            cmd.Parameters.AddWithValue("@ID", Max_CoachID+1);
             cmd.Parameters.AddWithValue("@Train_ID", get_TrainID());
             cmd.Parameters.AddWithValue("@Coach_No", int.Parse(tBoxCoachNo.Text));
             cmd.Parameters.AddWithValue("@class", get_CoachClass());
             cmd.ExecuteNonQuery();
+            Add_Seats(Max_CoachID + 1, int.Parse(cBoxSeats.SelectedItem.ToString()));
             MessageBox.Show("Coach Has Been Added Successfully");
             Form11_Load_1(sender, e);
         }
-
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
@@ -114,7 +142,7 @@ namespace Project
             cmd.Parameters.AddWithValue("@Coach_No", int.Parse(tBoxCoachNo.Text));
             cmd.ExecuteNonQuery();
             MessageBox.Show("Coach Has Been Removed Successfully");
-             Form11_Load_1(sender, e);
+            Form11_Load_1(sender, e);
         }
 
         private void Form11_Load_1(object sender, EventArgs e)
