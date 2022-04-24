@@ -185,3 +185,4 @@ C:\Users\Rafaqat\Documents\GitHub\dbfinalgid-41\dbfinalgid-41\Project\Project\ob
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form11.resources
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form12.resources
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Main_P.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Book_t.resources

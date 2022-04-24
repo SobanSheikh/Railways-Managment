@@ -14,9 +14,20 @@ namespace Project
         public Form1()
         {
             InitializeComponent();
-            
+            Show();
+           
         }
 
+        private void Show()
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("Select Ta.Name As TrainName,S.Name AS Source From Train_Details T Join Station S on S.ID=T.Source join Train Ta on T.Train_ID=Ta.ID", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+        
         private Form isactive;
         private void change_form(Form form)
         {
@@ -47,6 +58,16 @@ namespace Project
             change_form(new Form8());
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Book_t bt = new Book_t();
+            bt.tBoxName.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            change_form(bt);
+        }
     }
 }
