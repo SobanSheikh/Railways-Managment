@@ -163,5 +163,10 @@ namespace Project
             }
             Form7_Load(sender, e);
         }
+
+        private void btnFare_Click(object sender, EventArgs e)
+        {
+            change_form(new Form13());
+        }
     }
 }

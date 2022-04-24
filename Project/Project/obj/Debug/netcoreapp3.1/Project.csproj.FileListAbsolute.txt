@@ -225,4 +225,4 @@ C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\P
 C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.dll
 C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.pdb
 C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache
-
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form13.resources

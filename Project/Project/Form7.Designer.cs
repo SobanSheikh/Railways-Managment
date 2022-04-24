@@ -42,18 +42,21 @@ namespace Project
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnFare = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btnCoach);
+            this.panel1.Controls.Add(this.tableLayoutPanel5);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
@@ -62,14 +65,15 @@ namespace Project
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(764, 439);
+            this.panel1.Size = new System.Drawing.Size(837, 439);
             this.panel1.TabIndex = 0;
             // 
             // btnCoach
             // 
-            this.btnCoach.Location = new System.Drawing.Point(594, 21);
+            this.btnCoach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCoach.Location = new System.Drawing.Point(3, 3);
             this.btnCoach.Name = "btnCoach";
-            this.btnCoach.Size = new System.Drawing.Size(126, 31);
+            this.btnCoach.Size = new System.Drawing.Size(94, 41);
             this.btnCoach.TabIndex = 15;
             this.btnCoach.Text = "Manage Coach";
             this.btnCoach.UseVisualStyleBackColor = true;
@@ -77,15 +81,14 @@ namespace Project
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(409, 77);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(448, 77);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -160,7 +163,7 @@ namespace Project
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(288, 76);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(342, 76);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
             // label2
@@ -169,7 +172,7 @@ namespace Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(120, 10);
+            this.label2.Location = new System.Drawing.Point(147, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
@@ -186,7 +189,7 @@ namespace Project
             this.tBoxName.Multiline = true;
             this.tBoxName.Name = "tBoxName";
             this.tBoxName.PlaceholderText = "name";
-            this.tBoxName.Size = new System.Drawing.Size(282, 29);
+            this.tBoxName.Size = new System.Drawing.Size(336, 29);
             this.tBoxName.TabIndex = 21;
             // 
             // tableLayoutPanel3
@@ -203,7 +206,7 @@ namespace Project
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(726, 208);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(799, 208);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // dataGridView1
@@ -220,7 +223,7 @@ namespace Project
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(722, 204);
+            this.dataGridView1.Size = new System.Drawing.Size(795, 204);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cell_Clicked);
             // 
@@ -230,7 +233,7 @@ namespace Project
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(309, 25);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(345, 25);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -253,11 +256,36 @@ namespace Project
             this.label1.Text = "Manage Trains";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.btnFare, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnCoach, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(583, 12);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(200, 47);
+            this.tableLayoutPanel5.TabIndex = 16;
+            // 
+            // btnFare
+            // 
+            this.btnFare.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFare.Location = new System.Drawing.Point(103, 3);
+            this.btnFare.Name = "btnFare";
+            this.btnFare.Size = new System.Drawing.Size(94, 41);
+            this.btnFare.TabIndex = 16;
+            this.btnFare.Text = "Manage Fare";
+            this.btnFare.UseVisualStyleBackColor = true;
+            this.btnFare.Click += new System.EventHandler(this.btnFare_Click);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 439);
+            this.ClientSize = new System.Drawing.Size(837, 439);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form7";
@@ -271,6 +299,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -290,5 +319,7 @@ namespace Project
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox tBoxName;
         private System.Windows.Forms.Button btnCoach;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button btnFare;
     }
 }

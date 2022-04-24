@@ -37,10 +37,10 @@ namespace Project
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnRoutes = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
+            this.btnRoutes = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -139,8 +139,7 @@ namespace Project
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -159,19 +158,19 @@ namespace Project
             this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 73);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // btnRoutes
+            // btnUser
             // 
-            this.btnRoutes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRoutes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRoutes.Location = new System.Drawing.Point(2, 46);
-            this.btnRoutes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRoutes.Name = "btnRoutes";
-            this.btnRoutes.Size = new System.Drawing.Size(180, 25);
-            this.btnRoutes.TabIndex = 2;
-            this.btnRoutes.Text = "Manage Routes";
-            this.btnRoutes.UseVisualStyleBackColor = true;
-            this.btnRoutes.Click += new System.EventHandler(this.btnRoutes_Click);
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUser.Location = new System.Drawing.Point(186, 2);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(180, 27);
+            this.btnUser.TabIndex = 3;
+            this.btnUser.Text = "User";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // button1
             // 
@@ -201,19 +200,19 @@ namespace Project
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnUser
+            // btnRoutes
             // 
-            this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnRoutes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUser.Location = new System.Drawing.Point(186, 2);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(180, 27);
-            this.btnUser.TabIndex = 3;
-            this.btnUser.Text = "User";
-            this.btnUser.UseVisualStyleBackColor = true;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            this.btnRoutes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRoutes.Location = new System.Drawing.Point(2, 46);
+            this.btnRoutes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRoutes.Name = "btnRoutes";
+            this.btnRoutes.Size = new System.Drawing.Size(180, 25);
+            this.btnRoutes.TabIndex = 2;
+            this.btnRoutes.Text = "Manage Routes";
+            this.btnRoutes.UseVisualStyleBackColor = true;
+            this.btnRoutes.Click += new System.EventHandler(this.btnRoutes_Click);
             // 
             // Form5
             // 

@@ -55,6 +55,7 @@ namespace Project
             {
                 MessageBox.Show("Invalid Login Attempt", "Error");
             }
+            clear();
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
