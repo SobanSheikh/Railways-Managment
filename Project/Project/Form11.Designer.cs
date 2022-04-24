@@ -31,6 +31,7 @@ namespace Project
         {
             this.cBoxClass = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cBoxSeats = new System.Windows.Forms.ComboBox();
             this.cBoxTrains = new System.Windows.Forms.ComboBox();
             this.tBoxCoachNo = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -66,48 +67,71 @@ namespace Project
             // 
             // cBoxClass
             // 
+            this.cBoxClass.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cBoxClass.FormattingEnabled = true;
             this.cBoxClass.Items.AddRange(new object[] {
             "Economy",
             "Business",
             "Ac"});
-            this.cBoxClass.Location = new System.Drawing.Point(3, 71);
+            this.cBoxClass.Location = new System.Drawing.Point(3, 65);
             this.cBoxClass.Name = "cBoxClass";
-            this.cBoxClass.Size = new System.Drawing.Size(289, 23);
+            this.cBoxClass.Size = new System.Drawing.Size(332, 23);
             this.cBoxClass.TabIndex = 15;
             this.cBoxClass.Text = "Class";
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.cBoxSeats, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.cBoxTrains, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cBoxClass, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tBoxCoachNo, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(244, 40);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(244, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.47059F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.52941F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(295, 101);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 115);
             this.tableLayoutPanel1.TabIndex = 17;
+            // 
+            // cBoxSeats
+            // 
+            this.cBoxSeats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cBoxSeats.FormattingEnabled = true;
+            this.cBoxSeats.Items.AddRange(new object[] {
+            "30",
+            "40",
+            "50",
+            "60",
+            "70"});
+            this.cBoxSeats.Location = new System.Drawing.Point(3, 92);
+            this.cBoxSeats.Name = "cBoxSeats";
+            this.cBoxSeats.Size = new System.Drawing.Size(332, 23);
+            this.cBoxSeats.TabIndex = 17;
+            this.cBoxSeats.Text = "number of seats";
             // 
             // cBoxTrains
             // 
+            this.cBoxTrains.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cBoxTrains.FormattingEnabled = true;
             this.cBoxTrains.Location = new System.Drawing.Point(3, 3);
             this.cBoxTrains.Name = "cBoxTrains";
-            this.cBoxTrains.Size = new System.Drawing.Size(289, 23);
+            this.cBoxTrains.Size = new System.Drawing.Size(332, 23);
             this.cBoxTrains.TabIndex = 14;
             this.cBoxTrains.Text = "Train";
             // 
             // tBoxCoachNo
             // 
-            this.tBoxCoachNo.Location = new System.Drawing.Point(3, 38);
+            this.tBoxCoachNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tBoxCoachNo.Location = new System.Drawing.Point(3, 35);
             this.tBoxCoachNo.Name = "tBoxCoachNo";
             this.tBoxCoachNo.PlaceholderText = "Coach Number";
-            this.tBoxCoachNo.Size = new System.Drawing.Size(289, 23);
+            this.tBoxCoachNo.Size = new System.Drawing.Size(332, 23);
             this.tBoxCoachNo.TabIndex = 16;
             // 
             // dateTimePicker2
@@ -152,14 +176,13 @@ namespace Project
             // 
             // btnDelete
             // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnDelete.Location = new System.Drawing.Point(312, 2);
+            this.btnDelete.Location = new System.Drawing.Point(292, 2);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 27);
+            this.btnDelete.Size = new System.Drawing.Size(142, 35);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -229,14 +252,13 @@ namespace Project
             // 
             // btnAdd
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnAdd.Location = new System.Drawing.Point(2, 2);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(167, 27);
+            this.btnAdd.Size = new System.Drawing.Size(141, 35);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -244,14 +266,13 @@ namespace Project
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button5.Location = new System.Drawing.Point(173, 2);
+            this.button5.Location = new System.Drawing.Point(147, 2);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 27);
+            this.button5.Size = new System.Drawing.Size(141, 35);
             this.button5.TabIndex = 3;
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = true;
@@ -262,9 +283,9 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 2, 0);
@@ -273,7 +294,7 @@ namespace Project
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(434, 39);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(436, 39);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
             // cBoxStation
@@ -287,15 +308,20 @@ namespace Project
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(579, 195);
             this.dataGridView1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
@@ -303,7 +329,7 @@ namespace Project
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(598, 213);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(585, 201);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
             // panel1
@@ -312,9 +338,10 @@ namespace Project
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(-10, -6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 462);
+            this.panel1.Size = new System.Drawing.Size(937, 450);
             this.panel1.TabIndex = 1;
             // 
             // cBoxTrain
@@ -421,5 +448,6 @@ namespace Project
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cBoxSeats;
     }
 }
