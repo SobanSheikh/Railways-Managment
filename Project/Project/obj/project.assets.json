@@ -510,11 +510,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafaqat\\Desktop\\dbfinalgid-41\\Project\\Project\\Project.csproj",
+      "projectUniqueName": "E:\\dbfinalgid-41\\Project\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Users\\Rafaqat\\Desktop\\dbfinalgid-41\\Project\\Project\\Project.csproj",
+      "projectPath": "E:\\dbfinalgid-41\\Project\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\Rafaqat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafaqat\\Desktop\\dbfinalgid-41\\Project\\Project\\obj\\",
+      "outputPath": "E:\\dbfinalgid-41\\Project\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rafaqat\\AppData\\Roaming\\NuGet\\NuGet.Config",
