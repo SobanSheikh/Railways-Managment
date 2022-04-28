@@ -267,3 +267,7 @@ E:\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.csproj.CopyComp
 E:\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.dll
 E:\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.pdb
 E:\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Form13.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Book_t.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Seat.resources
+N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Payment.resources

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dbfinalgid-41\\Project\\Project\\Project.csproj": {}
+    "N:\\BSCS\\4th Semester\\Database Lab\\dbfinalgid-41\\dbfinalgid-41\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "E:\\dbfinalgid-41\\Project\\Project\\Project.csproj": {
+    "N:\\BSCS\\4th Semester\\Database Lab\\dbfinalgid-41\\dbfinalgid-41\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dbfinalgid-41\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "N:\\BSCS\\4th Semester\\Database Lab\\dbfinalgid-41\\dbfinalgid-41\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "E:\\dbfinalgid-41\\Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\Rafaqat\\.nuget\\packages\\",
-        "outputPath": "E:\\dbfinalgid-41\\Project\\Project\\obj\\",
+        "projectPath": "N:\\BSCS\\4th Semester\\Database Lab\\dbfinalgid-41\\dbfinalgid-41\\Project\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\zhass\\.nuget\\packages\\",
+        "outputPath": "N:\\BSCS\\4th Semester\\Database Lab\\dbfinalgid-41\\dbfinalgid-41\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafaqat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zhass\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

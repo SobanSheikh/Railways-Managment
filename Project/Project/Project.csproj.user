@@ -4,6 +4,9 @@
     <Compile Update="Atendance.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Book t.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,6 +50,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Seat.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
