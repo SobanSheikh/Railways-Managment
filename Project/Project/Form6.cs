@@ -115,7 +115,6 @@ namespace Project
         {
             if ( current_StationID >= 0)
             {
-                MessageBox.Show(current_StationID + "");
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("execute sp_UpdateStation @Station_ID=@Id,@Station_Name=@Name,@Station_Location=@Location", con);
                 cmd.Parameters.AddWithValue("@Id", current_StationID);

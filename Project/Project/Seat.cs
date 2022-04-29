@@ -103,11 +103,11 @@ namespace Project
             DataGridViewFill();
             Available_Seats();
         }
-        private void get_MaxTicketId()
+        private int get_MaxTicketId()
         {
             max_TicketId = 0;
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select MAX(Ticket.ID) FROM Ticket", con);
+            SqlCommand cmd = new SqlCommand("select MAX(Ticket.Ticket_No) FROM Ticket", con);
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
@@ -117,6 +117,7 @@ namespace Project
                 }
             }
             rq.Close();
+            return max_TicketId;
         }
         private int get_SeatId()
         {
@@ -126,7 +127,7 @@ namespace Project
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
-                if (rq[0] != null)
+                if (rq[0].ToString() != "")
                 {
                     Train_id = int.Parse(rq[0].ToString());
                 }
@@ -134,17 +135,91 @@ namespace Project
             rq.Close();
             return Train_id;
         }
+        private int select_Class()
+        {
+            int f = 0;
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("select Coach.Class from Coach where Coach.ID='"+get_CoachId()+"'", con);
+            SqlDataReader rq = cmd.ExecuteReader();
+            while (rq.Read())
+            {
+                if (rq[0].ToString() != "")
+                {
+                    f = int.Parse(rq[0].ToString());
+                }
+            }
+            rq.Close();
+            return f;
+        }
+        private int Calculate_Fare()
+        {
+            int f = 0;
+            if (select_Class()==3)
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("select Train_Details.Economy_Fare FROM Train_Details where Train_Details.Source='" + Program.source + "' and Train_Details.Destination='" + Program.destination + "' and Train_Details.Train_ID='" + get_TrainID() + "'", con);
+                SqlDataReader rq = cmd.ExecuteReader();
+                while (rq.Read())
+                {
+                    if (rq[0].ToString() != "")
+                    {
+                        f = int.Parse(rq[0].ToString());
+                    }
+                }
+                rq.Close();
+            }
+            else if(select_Class()==4)
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("select Train_Details.Business_Fare FROM Train_Details where Train_Details.Source='" + Program.source + "' and Train_Details.Destination='" + Program.destination + "' and Train_Details.Train_ID='" + get_TrainID() + "'", con);
+                SqlDataReader rq = cmd.ExecuteReader();
+                while (rq.Read())
+                {
+                    if (rq[0].ToString() != "")
+                    {
+                        f = int.Parse(rq[0].ToString());
+                    }
+                }
+                rq.Close();
+            }
+            else
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("select Train_Details.AC FROM Train_Details where Train_Details.Source='" + Program.source + "' and Train_Details.Destination='" + Program.destination + "' and Train_Details.Train_ID='" + get_TrainID() + "'", con);
+                SqlDataReader rq = cmd.ExecuteReader();
+                while (rq.Read())
+                {
+                    if (rq[0].ToString() != "")
+                    {
+                        f = int.Parse(rq[0].ToString());
+                    }
+                }
+                rq.Close();
+            }
+            return f;
+        }
+        private void Add_Booking(int id)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("Insert into Booking values (@Ticket_ID,@User_ID,GETDATE(),@TDate,@Fare)", con);
+            cmd.Parameters.AddWithValue("@Ticket_ID",id);
+            cmd.Parameters.AddWithValue("@User_ID", Program.current_UserID);
+            cmd.Parameters.AddWithValue("@TDate",dateTimePicker1.Value);
+            cmd.Parameters.AddWithValue("@Fare",Calculate_Fare());
+            cmd.ExecuteNonQuery();
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("Insert into Ticket values (@Ticket_ID,@Seat_ID,@Source,@Destination,@Status)", con);
-            cmd.Parameters.AddWithValue("@Ticket_ID",max_TicketId+1);
+            cmd.Parameters.AddWithValue("@Ticket_ID", get_MaxTicketId()+1);
             cmd.Parameters.AddWithValue("@Seat_ID",get_SeatId());
             cmd.Parameters.AddWithValue("@Source", Program.source);
             cmd.Parameters.AddWithValue("@Destination",Program.destination);
             cmd.Parameters.AddWithValue("@Status", 7);
-            Program.listofSeats.Add(max_TicketId + 1);
             cmd.ExecuteNonQuery();
+            Add_Booking(get_MaxTicketId());
+            Program.listofSeats.Add(get_MaxTicketId());
             MessageBox.Show("Seat Has Been occupied Successfully", "Message");
             Seat_Load(sender, e);
         }

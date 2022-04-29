@@ -11,7 +11,6 @@ namespace Project
 {
     public partial class Form7 : Form
     {
-        private int Max_TrainId=0;
         private int current_TrainID=-1;
         public Form7()
         {
@@ -64,7 +63,7 @@ namespace Project
         {
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("execute sp_AddTrain @TrainId=@Id,@TrainName=@Name", con);
-            cmd.Parameters.AddWithValue("@Id", Max_TrainId + 1);
+            cmd.Parameters.AddWithValue("@Id", get_MaxTrainId() + 1);
             cmd.Parameters.AddWithValue("@Name",tBoxName.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Train Has Been Added Successfully");
@@ -87,19 +86,21 @@ namespace Project
             DataTable dt = new DataTable(); da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-        private void get_MaxTrainId()
+        private int get_MaxTrainId()
         {
+            int id=0;
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select Train.ID FROM Train where Train.[Name]='a' ", con);
+            SqlCommand cmd = new SqlCommand("select MAX(Train.ID) FROM Train", con);
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
                 if (rq[0].ToString() != "")
                 {
-                    current_TrainID = int.Parse(rq[0].ToString());
+                    id = int.Parse(rq[0].ToString());
                 }
             }
             rq.Close();
+            return id;
         }
         private Form isactive;
         private void change_form(Form form)

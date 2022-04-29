@@ -19,7 +19,6 @@ namespace Project
         {
 
         }
-
         private Form isactive;
         private void change_form(Form form)
         {
@@ -38,17 +37,24 @@ namespace Project
         }
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [USER] VALUES(@Id,@Name,@Password,@Email,@Contact,@CNIC,@DateofBirth)", con);
-            cmd.Parameters.AddWithValue("@Id", Max_UserID + 1);
-            cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
-            cmd.Parameters.AddWithValue("@Password",tBoxPassword.Text);
-            cmd.Parameters.AddWithValue("@Email",tBoxEmail.Text);
-            cmd.Parameters.AddWithValue("@Contact",tBoxContact.Text);
-            cmd.Parameters.AddWithValue("@CNIC", tBoxCNIC.Text);
-            cmd.Parameters.AddWithValue("@DateofBirth",dateTimePicker1.Value);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Account Has Been Created Successfully");
+            if (is_account() == false)
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("INSERT INTO [USER] VALUES(@Id,@Name,@Password,@Email,@Contact,@CNIC,@DateofBirth)", con);
+                cmd.Parameters.AddWithValue("@Id", Max_UserID + 1);
+                cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
+                cmd.Parameters.AddWithValue("@Password", tBoxPassword.Text);
+                cmd.Parameters.AddWithValue("@Email", tBoxEmail.Text);
+                cmd.Parameters.AddWithValue("@Contact", tBoxContact.Text);
+                cmd.Parameters.AddWithValue("@CNIC", tBoxCNIC.Text);
+                cmd.Parameters.AddWithValue("@DateofBirth", dateTimePicker1.Value);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Account Has Been Created Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Your Account Already Exists");
+            }
             Form4_Load(sender, e);
         }
         private void get_MaxUserId()
@@ -63,12 +69,28 @@ namespace Project
             }
             rq.Close();
         }
+        private bool is_account()
+        {
+            bool flag=false;
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("select * from [User]", con);
+            SqlDataReader rq = cmd.ExecuteReader();
+            while (rq.Read())
+            {
+                if ((rq[1].ToString() == tBoxName.Text.ToString() && rq[2].ToString() ==tBoxPassword.Text.ToString()) || (rq[3].ToString() == tBoxEmail.Text.ToString() && rq[2].ToString() == tBoxPassword.Text.ToString()))
+                {
+                    flag = true;
+                }
+            }
+            rq.Close();
+            return flag;
+        }
         private void Form4_Load(object sender, EventArgs e)
         {
+            clean();
             get_MaxUserId();
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
+        private void clean()
         {
             tBoxName.Text = "";
             tBoxEmail.Text = "";
@@ -77,19 +99,17 @@ namespace Project
             tBoxPassword.Text = "";
             dateTimePicker1.Value = DateTime.Now;
         }
-
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clean();
+        }
         private void tBoxPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             change_form(new Form3());
         }
-
-       
-           
-        
     }
 }
