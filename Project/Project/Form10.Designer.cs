@@ -42,6 +42,7 @@ namespace Project
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.cBoxTrain = new System.Windows.Forms.ComboBox();
@@ -63,6 +64,7 @@ namespace Project
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -168,10 +170,10 @@ namespace Project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(441, 6);
+            this.label2.Location = new System.Drawing.Point(453, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -255,15 +257,26 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.tableLayoutPanel8);
             this.panel2.Controls.Add(this.tableLayoutPanel7);
             this.panel2.Controls.Add(this.tableLayoutPanel6);
             this.panel2.Controls.Add(this.tableLayoutPanel5);
-            this.panel2.Location = new System.Drawing.Point(-7, -2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(-5, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1161, 790);
+            this.panel2.Size = new System.Drawing.Size(813, 474);
             this.panel2.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Project.Properties.Resources.icons8_back_641;
+            this.pictureBox3.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(66, 45);
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -278,24 +291,22 @@ namespace Project
             this.tableLayoutPanel8.Controls.Add(this.dateTimePicker1, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.dateTimePicker2, 1, 2);
             this.tableLayoutPanel8.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(241, 150);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(169, 90);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(773, 173);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(541, 104);
             this.tableLayoutPanel8.TabIndex = 23;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(383, 61);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(268, 37);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 32);
+            this.label5.Size = new System.Drawing.Size(118, 21);
             this.label5.TabIndex = 22;
             this.label5.Text = "Departure Time";
             // 
@@ -303,10 +314,9 @@ namespace Project
             // 
             this.cBoxTrain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cBoxTrain.FormattingEnabled = true;
-            this.cBoxTrain.Location = new System.Drawing.Point(4, 5);
-            this.cBoxTrain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cBoxTrain.Location = new System.Drawing.Point(3, 3);
             this.cBoxTrain.Name = "cBoxTrain";
-            this.cBoxTrain.Size = new System.Drawing.Size(371, 33);
+            this.cBoxTrain.Size = new System.Drawing.Size(259, 23);
             this.cBoxTrain.TabIndex = 13;
             this.cBoxTrain.Text = "Train";
             // 
@@ -314,10 +324,9 @@ namespace Project
             // 
             this.cBoxStation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cBoxStation.FormattingEnabled = true;
-            this.cBoxStation.Location = new System.Drawing.Point(383, 5);
-            this.cBoxStation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cBoxStation.Location = new System.Drawing.Point(268, 3);
             this.cBoxStation.Name = "cBoxStation";
-            this.cBoxStation.Size = new System.Drawing.Size(386, 33);
+            this.cBoxStation.Size = new System.Drawing.Size(270, 23);
             this.cBoxStation.TabIndex = 14;
             this.cBoxStation.Text = "Station";
             // 
@@ -326,11 +335,10 @@ namespace Project
             this.dateTimePicker1.CustomFormat = "\"HH:mm\"";
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(4, 127);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 77);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(371, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(259, 23);
             this.dateTimePicker1.TabIndex = 19;
             this.dateTimePicker1.Value = new System.DateTime(2022, 4, 22, 14, 34, 0, 0);
             // 
@@ -339,21 +347,19 @@ namespace Project
             this.dateTimePicker2.CustomFormat = "HH:mm:ss";
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(383, 127);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker2.Location = new System.Drawing.Point(268, 77);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(386, 31);
+            this.dateTimePicker2.Size = new System.Drawing.Size(270, 23);
             this.dateTimePicker2.TabIndex = 20;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(4, 61);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 32);
+            this.label4.Size = new System.Drawing.Size(94, 21);
             this.label4.TabIndex = 21;
             this.label4.Text = "Arrival Time";
             // 
@@ -364,12 +370,11 @@ namespace Project
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Controls.Add(this.dataGridView2, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(206, 448);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(144, 269);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(864, 337);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(605, 202);
             this.tableLayoutPanel7.TabIndex = 22;
             // 
             // dataGridView2
@@ -377,12 +382,11 @@ namespace Project
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 5);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(856, 327);
+            this.dataGridView2.Size = new System.Drawing.Size(599, 196);
             this.dataGridView2.TabIndex = 16;
             // 
             // tableLayoutPanel6
@@ -397,11 +401,12 @@ namespace Project
             this.tableLayoutPanel6.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(279, 347);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(195, 208);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(591, 65);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(414, 39);
             this.tableLayoutPanel6.TabIndex = 21;
             // 
             // button1
@@ -410,9 +415,10 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Location = new System.Drawing.Point(2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 45);
+            this.button1.Size = new System.Drawing.Size(134, 27);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -424,9 +430,10 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(395, 3);
+            this.button2.Location = new System.Drawing.Point(278, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 45);
+            this.button2.Size = new System.Drawing.Size(134, 27);
             this.button2.TabIndex = 4;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
@@ -438,9 +445,10 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Location = new System.Drawing.Point(199, 3);
+            this.button3.Location = new System.Drawing.Point(140, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 45);
+            this.button3.Size = new System.Drawing.Size(134, 27);
             this.button3.TabIndex = 3;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
@@ -453,11 +461,12 @@ namespace Project
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(421, 52);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(295, 31);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(239, 58);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(167, 35);
             this.tableLayoutPanel5.TabIndex = 12;
             // 
             // label3
@@ -467,20 +476,20 @@ namespace Project
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(46, 14);
+            this.label3.Location = new System.Drawing.Point(35, 7);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 29);
+            this.label3.Size = new System.Drawing.Size(97, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Manage Route";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form10
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 778);
+            this.ClientSize = new System.Drawing.Size(800, 467);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form10";
             this.Text = "Form10";
             this.Load += new System.EventHandler(this.Form10_Load);
@@ -491,6 +500,7 @@ namespace Project
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -532,5 +542,6 @@ namespace Project
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

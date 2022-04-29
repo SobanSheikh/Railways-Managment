@@ -151,5 +151,26 @@ namespace Project
             get_MaxCoachId();
             DataGridView_Fill();
         }
+        private Form isactive;
+        private void change_form(Form form)
+        {
+            if (isactive != null)
+            {
+                isactive.Close();
+            }
+            isactive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Form7());
+        }
     }
 }

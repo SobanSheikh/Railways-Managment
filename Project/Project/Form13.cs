@@ -85,7 +85,6 @@ namespace Project
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-         
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("Insert into Train_Details values (@ID,@Train_ID,@Source_Id,@Dest_ID,@AC,@Business,@Economy)", con);
             cmd.Parameters.AddWithValue("@ID", Max_TrainDetailId + 1);
@@ -185,6 +184,26 @@ namespace Project
             cmd.ExecuteNonQuery();
             MessageBox.Show("Fare Detail Has Been Updated Successfully");
             Form13_Load(sender, e);
+        }
+        private Form isactive;
+        private void change_form(Form form)
+        {
+            if (isactive != null)
+            {
+                isactive.Close();
+            }
+            isactive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Form7());
         }
     }
 }

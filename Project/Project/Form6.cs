@@ -62,6 +62,23 @@ namespace Project
             DataGridView_Fill();
             get_MaxStationID();
         }
+
+        private Form isactive;
+        private void change_form(Form form)
+        {
+            if (isactive != null)
+            {
+                isactive.Close();
+            }
+            isactive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
@@ -108,6 +125,11 @@ namespace Project
                 MessageBox.Show("Train Has Been Updated Successfully");
             }
             Form6_Load(sender, e);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Form5());
         }
     }
 }

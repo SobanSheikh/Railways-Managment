@@ -117,5 +117,26 @@ namespace Project
             MessageBox.Show("Route Has Been Updated Successfully");
             Form10_Load(sender, e);
         }
+
+        private Form isactive;
+        private void change_form(Form form)
+        {
+            if (isactive != null)
+            {
+                isactive.Close();
+            }
+            isactive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel2.Controls.Add(form);
+            panel2.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Form5());
+        }
     }
 }

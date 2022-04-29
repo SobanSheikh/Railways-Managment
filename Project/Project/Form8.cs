@@ -59,9 +59,9 @@ namespace Project
             MessageBox.Show("You have logged out...");
             change_form(new Form3());
         }
-
-        
-
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            change_form(new Payment());
+        }
     }
 }

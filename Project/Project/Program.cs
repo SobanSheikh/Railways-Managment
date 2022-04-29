@@ -13,6 +13,8 @@ namespace Project
         ///  The main entry point for the application.
         /// </summary>
         public static int current_UserID = -1;
+        public static int source = -1;
+        public static int destination = -1;
         [STAThread]
         static void Main()
         {

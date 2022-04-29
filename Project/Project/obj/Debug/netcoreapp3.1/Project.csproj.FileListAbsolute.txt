@@ -271,3 +271,6 @@ N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\ob
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Book_t.resources
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Seat.resources
 N:\BSCS\4th Semester\Database Lab\dbfinalgid-41\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Payment.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Book_t.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Payment.resources
+C:\Users\Rafaqat\Desktop\dbfinalgid-41\Project\Project\obj\Debug\netcoreapp3.1\Project.Seat.resources
