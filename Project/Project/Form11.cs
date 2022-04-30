@@ -137,6 +137,11 @@ namespace Project
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd1 = new SqlCommand("Delete S from Coach C, Seat S Where C.Train_ID=@Train_ID and C.Coach_No=@Coach_No and C.ID=S.Coach_ID ", con);
+            cmd1.Parameters.AddWithValue("@Train_ID", get_TrainID());
+            cmd1.Parameters.AddWithValue("@Coach_No", int.Parse(tBoxCoachNo.Text));
+            cmd1.ExecuteNonQuery();
+
             SqlCommand cmd = new SqlCommand("Delete FROM Coach Where Train_ID=@Train_ID and Coach_No=@Coach_No", con);
             cmd.Parameters.AddWithValue("@Train_ID", get_TrainID());
             cmd.Parameters.AddWithValue("@Coach_No", int.Parse(tBoxCoachNo.Text));

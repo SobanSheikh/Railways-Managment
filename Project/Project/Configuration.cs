@@ -10,7 +10,7 @@ namespace Project
     {
 
 
-        String ConnectionStr = @"Data Source=DESKTOP-FHJVRDL;Initial Catalog=FinalProject-GID41;Integrated Security=True";
+        String ConnectionStr = @"Data Source=DESKTOP-ITRKI9O;Initial Catalog=FinalProject-GID41;Integrated Security=True";
 
 
         SqlConnection con;

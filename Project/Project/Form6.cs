@@ -82,9 +82,11 @@ namespace Project
         private void btnDelete_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd1 = new SqlCommand("DELETE T FROM Train_Route T, Station S Where S.Name=@Name and S.Location=@Location and S.ID=T.Station_ID ", con);
             SqlCommand cmd = new SqlCommand("execute  sp_RemoveStation @Station_Name=@Name,@Station_Location=@Location", con);
             cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
             cmd.Parameters.AddWithValue("@Location", tBoxLocation.Text);
+            cmd1.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
             MessageBox.Show("Station Has Been Removed Successfully");
             Form6_Load(sender, e);

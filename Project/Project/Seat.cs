@@ -211,7 +211,21 @@ namespace Project
         private void button3_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Insert into Ticket values (@Ticket_ID,@Seat_ID,@Source,@Destination,@Status)", con);
+            SqlCommand cmd = new SqlCommand("Begin Tran T1" +
+                "Insert into Ticket values (@Ticket_ID,@Seat_ID,@Source,@Destination,@Status)" +
+                "IF (SELECT Status FROM Ticket where Seat_ID=@Seat_ID)=9" +
+                "Begin" +
+                "  Commit Tran" +
+                "END" +
+                "ELSE IF (SELECT COUNT(*) FROM Ticket where Seat_ID IN(SELECT * FROM Ticket where Seat_ID=@Seat_ID and Status<>9))=0" +
+                "Begin" +
+                "   Commit Tran" +
+                "End" +
+                "ELSE" +
+                "Begin" +
+                "   Rollback Tran" +
+                "End" 
+                , con);
             cmd.Parameters.AddWithValue("@Ticket_ID", get_MaxTicketId()+1);
             cmd.Parameters.AddWithValue("@Seat_ID",get_SeatId());
             cmd.Parameters.AddWithValue("@Source", Program.source);

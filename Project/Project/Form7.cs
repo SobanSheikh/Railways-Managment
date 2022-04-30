@@ -72,8 +72,15 @@ namespace Project
         private void btnDelete_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd1 = new SqlCommand("DELETE T FROM Train_Route T,Train TR WHERE TR.Name=@Name and TR.ID=T.Train_ID", con);
+            SqlCommand cmd2 = new SqlCommand("DELETE T FROM Train_Details T,Train TR WHERE TR.Name=@Name and TR.ID=T.Train_ID", con);
+            SqlCommand cmd3 = new SqlCommand("DELETE T FROM Coach T,Train TR WHERE TR.Name=@Name and TR.ID=T.Train_ID", con);
+
             SqlCommand cmd = new SqlCommand("execute sp_RemoveTrain @TrainName=@Name", con);
             cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
+            cmd3.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
             MessageBox.Show("Train Has Been Removed Successfully");
             Form7_Load(sender, e);
