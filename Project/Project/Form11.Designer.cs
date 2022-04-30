@@ -44,7 +44,6 @@ namespace Project
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cBoxStation = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -181,10 +180,10 @@ namespace Project
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnDelete.Location = new System.Drawing.Point(292, 2);
+            this.btnDelete.Location = new System.Drawing.Point(201, 2);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(142, 35);
+            this.btnDelete.Size = new System.Drawing.Size(168, 35);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -260,24 +259,11 @@ namespace Project
             this.btnAdd.Location = new System.Drawing.Point(2, 2);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(141, 35);
+            this.btnAdd.Size = new System.Drawing.Size(149, 35);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button5.Location = new System.Drawing.Point(147, 2);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 35);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Update";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -285,18 +271,17 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.2844F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.61468F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.87156F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(181, 153);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(226, 147);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(436, 39);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(371, 39);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
             // cBoxStation
@@ -453,7 +438,6 @@ namespace Project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox cBoxStation;
         private System.Windows.Forms.DataGridView dataGridView1;
