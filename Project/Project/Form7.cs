@@ -77,6 +77,9 @@ namespace Project
             SqlCommand cmd3 = new SqlCommand("DELETE T FROM Coach T,Train TR WHERE TR.Name=@Name and TR.ID=T.Train_ID", con);
 
             SqlCommand cmd = new SqlCommand("execute sp_RemoveTrain @TrainName=@Name", con);
+            cmd1.Parameters.AddWithValue("@Name", tBoxName.Text);
+            cmd2.Parameters.AddWithValue("@Name", tBoxName.Text);
+            cmd3.Parameters.AddWithValue("@Name", tBoxName.Text);
             cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
             cmd1.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();

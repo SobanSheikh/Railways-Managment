@@ -84,6 +84,8 @@ namespace Project
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd1 = new SqlCommand("DELETE T FROM Train_Route T, Station S Where S.Name=@Name and S.Location=@Location and S.ID=T.Station_ID ", con);
             SqlCommand cmd = new SqlCommand("execute  sp_RemoveStation @Station_Name=@Name,@Station_Location=@Location", con);
+            cmd1.Parameters.AddWithValue("@Name", tBoxName.Text);
+            cmd1.Parameters.AddWithValue("@Location", tBoxLocation.Text);
             cmd.Parameters.AddWithValue("@Name", tBoxName.Text);
             cmd.Parameters.AddWithValue("@Location", tBoxLocation.Text);
             cmd1.ExecuteNonQuery();
