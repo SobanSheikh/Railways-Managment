@@ -50,7 +50,7 @@ namespace Project
         private void Available_Seats()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select Seat.Seat_No FROM Seat where Seat.ID not in (select Ticket.Seat_ID from Booking JOIN Ticket ON Booking.Ticket_ID=Ticket.Ticket_No where Booking.Travel_Date='"+dateTimePicker1.Value+"') and Seat.Coach_ID='"+get_CoachId()+"'", con);
+            SqlCommand cmd = new SqlCommand("select Seat.Seat_No FROM Seat where Seat.Coach_ID='"+get_CoachId()+"' and Seat.ID NOT IN (select Ticket.Seat_ID FROM Booking JOIN Ticket ON Ticket.Ticket_No=Booking.Ticket_ID where YEAR(Booking.Travel_Date) =YEAR('"+dateTimePicker1.Value+ "') and MONTH(Booking.Travel_Date)=MONTH('" + dateTimePicker1.Value + "') and DAY(Booking.Travel_Date)=DAY('" + dateTimePicker1.Value + "') )", con);
             SqlDataAdapter dat = new SqlDataAdapter(cmd);
             DataTable dtable = new DataTable();
             dat.Fill(dtable);
@@ -222,6 +222,11 @@ namespace Project
             Program.listofSeats.Add(get_MaxTicketId());
             MessageBox.Show("Seat Has Been occupied Successfully", "Message");
             Seat_Load(sender, e);
+        }
+
+        private void DateChange_Value(object sender, EventArgs e)
+        {
+            Available_Seats();
         }
     }
 }
