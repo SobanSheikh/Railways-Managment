@@ -61,6 +61,11 @@ namespace Project
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            change_form(new Refunds());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
             change_form(new Payment());
         }
     }

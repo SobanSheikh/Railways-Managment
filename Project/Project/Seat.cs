@@ -50,7 +50,7 @@ namespace Project
         private void Available_Seats()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select Seat.Seat_No from Seat where Coach_ID='"+get_CoachId()+"' and seat.[Status]=6", con);
+            SqlCommand cmd = new SqlCommand("select Seat.Seat_No FROM Seat where Seat.ID not in (select Ticket.Seat_ID from Booking JOIN Ticket ON Booking.Ticket_ID=Ticket.Ticket_No where Booking.Travel_Date='"+dateTimePicker1.Value+"') and Seat.Coach_ID='"+get_CoachId()+"'", con);
             SqlDataAdapter dat = new SqlDataAdapter(cmd);
             DataTable dtable = new DataTable();
             dat.Fill(dtable);

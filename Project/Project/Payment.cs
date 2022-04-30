@@ -43,7 +43,7 @@ namespace Project
         {
             int fare = 0;
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select * from view_Booking", con);
+            SqlCommand cmd = new SqlCommand("select Booking.Ticket_ID as [Ticket Number],Booking.Travel_Date as [Travelling Date],Booking.Fare From Booking JOIN Ticket ON Ticket.Ticket_No=Booking.Ticket_ID  where Booking.[User_ID]='" + Program.current_UserID + "' and Ticket.[Status] = 7", con);
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
@@ -58,7 +58,7 @@ namespace Project
         private void Seat_IDS()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select Booking.Ticket_ID as [Ticket Number],Booking.Travel_Date as [Travelling Date],Booking.Fare From Booking JOIN Ticket ON Ticket.Ticket_No=Booking.Ticket_ID where Booking.[User_ID]='"+Program.current_UserID+"' and Ticket.[Status] != 8", con);
+            SqlCommand cmd = new SqlCommand("select Booking.Ticket_ID as [Ticket Number],Booking.Travel_Date as [Travelling Date],Booking.Fare From Booking JOIN Ticket ON Ticket.Ticket_No=Booking.Ticket_ID where Booking.[User_ID]='"+Program.current_UserID+"' and Ticket.[Status] = 7", con);
             SqlDataReader rq = cmd.ExecuteReader();
             while (rq.Read())
             {
@@ -72,7 +72,7 @@ namespace Project
         private void DATAGRIDVIEWFILL()
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("select Booking.Ticket_ID as [Ticket Number],Booking.Travel_Date as [Travelling Date],Booking.Fare From Booking JOIN Ticket ON Ticket.Ticket_No=Booking.Ticket_ID where Booking.[User_ID]='" + Program.current_UserID + "' and Ticket.[Status] != 8", con);
+            SqlCommand cmd = new SqlCommand("select Booking.Ticket_ID as [Ticket Number],Booking.Travel_Date as [Travelling Date],Booking.Fare From Booking JOIN Ticket ON Ticket.Ticket_No=Booking.Ticket_ID  where Booking.[User_ID]='" + Program.current_UserID + "' and Ticket.[Status] = 7", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable(); da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -82,15 +82,31 @@ namespace Project
             textBox1.Text = Get_Totalfare().ToString();
             DATAGRIDVIEWFILL();
             Seat_IDS();
+            cancel = "";
         }
-
+        private int get_Money(int id)
+        {
+            int ammount = 0;
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("select Booking.Fare from  Booking where Booking.Ticket_ID='"+id+"'", con);
+            SqlDataReader rq = cmd.ExecuteReader();
+            while (rq.Read())
+            {
+                if (rq[0].ToString() != "")
+                {
+                    ammount = int.Parse(rq[0].ToString());
+                }
+            }
+            rq.Close();
+            return ammount;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             if(cancel!="")
             {
-                Delete_Booking();
+           //     Add_Refunds(int.Parse(cancel), get_Money(int.Parse(cancel)));
                 var con = Configuration.getInstance().getConnection();
-                SqlCommand cmd = new SqlCommand("DELETE FROM Ticket where Ticket.Ticket_No='" + int.Parse(cancel) + "'", con);
+                SqlCommand cmd = new SqlCommand("Update Ticket SET [Status]=9 where Ticket.Ticket_No='" + int.Parse(cancel) + "'", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Ticket Cancelled");
             }
@@ -100,16 +116,39 @@ namespace Project
             }
             Payment_Load(sender, e);
         }
-        private void Delete_Booking()
+     /*   private void Add_Refunds(int a,int b)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Booking where Booking.Ticket_ID='" + int.Parse(cancel) + "'", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Cancel_Booking VALUES(@Ticket_ID,@User_ID,@Fare)", con);
+            cmd.Parameters.AddWithValue("@Ticket_ID",a);
+            cmd.Parameters.AddWithValue("@User_ID", Program.current_UserID);
+            cmd.Parameters.AddWithValue("@Fare",b);
             cmd.ExecuteNonQuery();
-        }
+        }*/
         private void Cell_Clicked(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.CurrentRow.Selected = true;
             cancel = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+        }
+        private Form isactive;
+        private void change_form(Form form)
+        {
+            if (isactive != null)
+            {
+                isactive.Close();
+            }
+            isactive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            change_form(new Form8());
         }
     }
 }
